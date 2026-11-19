@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Easter Raj — HR Operations &amp; Process Automation Specialist</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --bg-primary: #f8fafc;
+      --text-primary: #0f172a;
+    }
+    html.dark {
+      --bg-primary: #090b10;
+      --text-primary: #f8fafc;
+    }
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    .grid-backdrop {
+      background-size: 36px 36px;
+      background-image:
+        linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    }
+    @keyframes pulseFlow {
+      0% { stroke-dashoffset: 120; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .stream-line {
+      stroke-dasharray: 8 8;
+      animation: pulseFlow 2.6s linear infinite;
+    }
+    body.animations-paused .stream-line,
+    body.animations-paused .pulse-dot {
+      animation-play-state: paused !important;
+    }
+    @keyframes pingSlow {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.45; }
+    }
+    .pulse-dot {
+      animation: pingSlow 2s ease-in-out infinite;
+    }
+    .display-hero {
+      font-size: clamp(2.5rem, 6.5vw, 5.25rem);
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+    }
+    .display-section {
+      font-size: clamp(2rem, 4.8vw, 3.8rem);
+      line-height: 0.96;
+      letter-spacing: -0.035em;
+      font-weight: 800;
+    }
+    @media print {
+      .no-print { display: none !important; }
+      #printCvSheet { display: block !important; }
+      body { background: #ffffff !important; color: #000000 !important; }
+    }
+      /* Portfolio redesign: editorial typography, calm contrast, and purposeful motion */
+    :root { --bg-primary:#f5f4ef; --text-primary:#19201c; --accent:#b7f36b; --ink:#19201c; --surface:#fffefa; --line:rgba(25,32,28,.12); --muted:#68716b; }
+    html.dark { --bg-primary:#101512; --text-primary:#f1f3eb; --accent:#c4f17b; --ink:#f1f3eb; --surface:#171e19; --line:rgba(239,244,232,.13); --muted:#a3ada5; }
+    html { scroll-padding-top: 112px; }
+    body { background:var(--bg-primary); color:var(--text-primary); font-family:Inter,system-ui,sans-serif; }
+    .grid-backdrop { background-image:radial-gradient(circle at 80% 8%,rgba(183,243,107,.09),transparent 27rem),linear-gradient(rgba(123,139,126,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(123,139,126,.045) 1px,transparent 1px); background-size:auto,54px 54px,54px 54px; }
+    .display-hero { font-size:clamp(3.5rem,10vw,8.8rem); line-height:.88; letter-spacing:-.075em; font-weight:800; }
+    .display-section { font-size:clamp(2.5rem,7vw,5.8rem); line-height:.9; letter-spacing:-.07em; font-weight:800; }
+    body > .no-print:first-child { border-color:var(--line); background:color-mix(in srgb,var(--bg-primary) 86%,transparent); }
+    #top { padding-top:3rem; }
+    #top > section:first-child { padding-top:clamp(3rem,8vw,7.5rem); }
+    #top > section:first-child > .max-w-4xl { max-width:900px; }
+    #top > section:first-child > .max-w-4xl > div:first-child { letter-spacing:.16em; }
+    #top > section:first-child > .max-w-4xl > p { font-size:clamp(1.05rem,2vw,1.28rem); max-width:690px; line-height:1.8; }
+    #top > section:first-child .mt-14.grid > div { min-height:145px; display:flex; flex-direction:column; justify-content:space-between; }
+    #top > section:first-child .rounded-xl, #top > section:first-child .rounded-2xl { border-radius:1.2rem; }
+    .pipeline-node { border-radius:1rem; }
+    #top section[data-stream] { border-color:var(--line); }
+    #top section:not(:first-child) { padding-top:clamp(5rem,9vw,9rem); padding-bottom:clamp(5rem,9vw,9rem); }
+    #top section:not(:first-child) .rounded-2xl, #top section:not(:first-child) .rounded-xl { border-radius:1.25rem; }
+    .no-print.sticky { border-color:var(--line); background:color-mix(in srgb,var(--bg-primary) 84%,transparent); box-shadow:0 1px 0 rgba(255,255,255,.02); }
+    .no-print.sticky nav a { position:relative; }
+    .no-print.sticky nav a::after { content:""; position:absolute; left:12px; right:12px; bottom:2px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .25s ease; }
+    .no-print.sticky nav a:hover::after,.no-print.sticky nav a[aria-current="location"]::after { transform:scaleX(1); }
+    a,button { -webkit-tap-highlight-color:transparent; }
+    button,a { transition:color .2s ease,background-color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease; }
+    a:focus-visible,button:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+    .scroll-progress { position:absolute; left:0; bottom:-1px; height:2px; width:var(--page-progress,0%); background:var(--accent); transition:width .08s linear; }
+    .reveal-ready .reveal { opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1); }
+    .reveal-ready .reveal.is-visible { opacity:1; transform:translateY(0); }
+    .reveal-ready .reveal:nth-child(2n) { transition-delay:80ms; }
+    .section-current { animation:sectionEnter .55s ease both; }
+    @keyframes sectionEnter { from { opacity:.72; } to { opacity:1; } }
+    @media (hover:hover) { .pipeline-node:hover,.macro-card:hover { transform:translateY(-3px); } #top a[href="#work"]:hover,#top button:hover { transform:translateY(-2px); } }
+    @media (max-width:767px) { html { scroll-padding-top:90px; } #top { padding-top:1.25rem; } #top > section:first-child { padding-top:3.25rem; } #top > section:first-child > .max-w-4xl > div:first-child { line-height:1.65; } #top > section:first-child .mt-14.grid > div { min-height:122px; padding:1rem; } .display-hero { font-size:clamp(3.15rem,16vw,6.1rem); } .display-section { font-size:clamp(2.6rem,13vw,4.4rem); } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } .reveal-ready .reveal { opacity:1; transform:none; } }
+  </style>
+</head>
+<body class="min-h-screen selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- TOP TELEMETRY STREAM BAR -->
+  <div class="no-print sticky top-0 z-50 border-b border-slate-200/80 dark:border-slate-800/90 bg-slate-50/90 dark:bg-[#090b10]/90 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-9 flex items-center justify-between text-[11px] font-mono tracking-tight text-slate-500 dark:text-slate-400">
+      <div class="flex items-center gap-3 truncate">
+        <span class="inline-flex items-center gap-1.5 text-slate-900 dark:text-slate-200 font-semibold">
+          <span id="liveDot" class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
+          Easter Raj / HR Operations &amp; Automation
+        </span>
+        <span class="hidden sm:inline text-slate-300 dark:text-slate-700">|</span>
+        <span class="hidden sm:inline text-emerald-600 dark:text-emerald-400">Throughput <span id="throughputCounter">23.0</span>h saved/mo</span>
+      </div>
+      <div class="flex items-center gap-4 shrink-0">
+        <span id="activeStreamLabel" class="hidden md:inline text-slate-600 dark:text-slate-300">00 — Ingest · Home</span>
+        <span class="px-1.5 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800/80 text-slate-800 dark:text-slate-200 font-semibold">
+          <span id="scrollPercent">000</span> / 100
+        </span>
+      </div>
+    </div>
+
+    <!-- MAIN NAVIGATION BAR -->
+    <div class="border-t border-slate-200/60 dark:border-slate-800/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-3">
+        <a href="#top" class="font-mono text-sm font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+          <span class="w-6 h-6 rounded bg-slate-900 dark:bg-emerald-500 text-white dark:text-slate-950 flex items-center justify-center text-xs font-extrabold">ER</span>
+          <span>Easter R.</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-1 font-mono text-xs">
+          <a href="#work" class="px-3 py-1.5 rounded hover:bg-slate-200/60 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 transition">01 · Work</a>
+          <a href="#macros" class="px-3 py-1.5 rounded hover:bg-slate-200/60 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 transition">02 · 7 Macros</a>
+          <a href="#about" class="px-3 py-1.5 rounded hover:bg-slate-200/60 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 transition">03 · About</a>
+          <a href="#notes" class="px-3 py-1.5 rounded hover:bg-slate-200/60 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 transition">04 · Field notes</a>
+          <a href="#contact" class="px-3 py-1.5 rounded hover:bg-slate-200/60 dark:hover:bg-slate-800/70 text-slate-600 dark:text-slate-300 transition">05 · Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button id="downloadCvTopBtn" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-mono font-semibold bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 hover:opacity-90 transition">
+            <span>Download CV</span>
+            <span>↓</span>
+          </button>
+          <a id="waTopLink" href="https://wa.me/919987973836?text=Hi%20Easter%2C%20I%20visited%20your%20portfolio%20website%20and%20was%20impressed%20by%20your%20HR%20Operations%20%26%20VBA%20Automation%20work.%20Let%27s%20connect!" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-mono font-semibold bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/25 transition">
+            <span>WhatsApp</span>
+            <span>↗</span>
+          </a>
+          <button id="themeToggleBtn" type="button" aria-label="Toggle color theme" class="px-2.5 py-1.5 rounded border border-slate-300 dark:border-slate-700 text-xs font-mono text-slate-700 dark:text-slate-300 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition">
+            <span id="themeToggleLabel">Light mode</span>
+          </button>
+          <button id="mobileMenuBtn" type="button" aria-label="Open menu" class="md:hidden px-2.5 py-1.5 rounded border border-slate-300 dark:border-slate-700 text-xs font-mono">
+            Menu
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Drawer -->
+      <div id="mobileMenuPanel" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 px-4 py-3 bg-white dark:bg-[#0d111a] font-mono text-xs space-y-2">
+        <div class="grid grid-cols-2 gap-2">
+          <a href="#work" class="mobile-nav-link px-3 py-2 rounded bg-slate-100 dark:bg-slate-800/70">01 · Selected Work</a>
+          <a href="#macros" class="mobile-nav-link px-3 py-2 rounded bg-slate-100 dark:bg-slate-800/70">02 · 7 VBA Macros</a>
+          <a href="#about" class="mobile-nav-link px-3 py-2 rounded bg-slate-100 dark:bg-slate-800/70">03 · About &amp; Grit</a>
+          <a href="#notes" class="mobile-nav-link px-3 py-2 rounded bg-slate-100 dark:bg-slate-800/70">04 · Field Notes</a>
+          <a href="#contact" class="mobile-nav-link px-3 py-2 rounded bg-slate-100 dark:bg-slate-800/70">05 · Contact</a>
+          <a href="https://wa.me/919987973836?text=Hi%20Easter%2C%20I%20visited%20your%20portfolio%20website%20and%20was%20impressed%20by%20your%20HR%20Operations%20%26%20VBA%20Automation%20work.%20Let%27s%20connect!" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-300 font-semibold">WhatsApp Chat ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="top" class="no-print grid-backdrop">
+
+    <!-- SECTION 00: HERO & LIVE PIPELINE STREAM -->
+    <section data-stream="00 — Ingest · Home" class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-20 border-b border-slate-200 dark:border-slate-800/80">
+
+      <!-- HERO HEADLINE & VALUE PROPOSITION -->
+      <div class="max-w-4xl">
+        <div class="font-mono text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3">
+          Easter Raj / HR Operations &amp; Process Automation Specialist · Mumbai, Maharashtra
+        </div>
+        <h1 class="display-hero uppercase text-slate-900 dark:text-white tracking-tight">
+          OPERATIONS.<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-400 to-sky-400">IN MOTION.</span>
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed font-normal">
+          I translate manual HR operational complexity into measurable business velocity — engineering <strong class="text-slate-900 dark:text-white font-semibold">Excel VBA + MS Copilot automations</strong>, governing <strong class="text-slate-900 dark:text-white font-semibold">Darwinbox &amp; Oracle PeopleSoft HRIS</strong>, and delivering zero-discrepancy employee lifecycle execution across enterprise teams.
+        </p>
+
+        <!-- Primary Action Bar -->
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#work" class="px-5 py-3 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-950 font-mono text-xs font-bold uppercase tracking-wider hover:opacity-90 transition">
+            Selected Work →
+          </a>
+          <button id="downloadCvHeroBtn" type="button" class="px-5 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-mono text-xs font-bold uppercase tracking-wider hover:border-emerald-500 transition flex items-center gap-2">
+            <span>Download CV (.DOC / PDF)</span>
+            <span>↓</span>
+          </button>
+          <a href="https://wa.me/919987973836?text=Hi%20Easter%2C%20I%20visited%20your%20portfolio%20website%20and%20was%20impressed%20by%20your%20HR%20Operations%20%26%20VBA%20Automation%20work.%20Let%27s%20connect!" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-lg bg-emerald-500 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 transition flex items-center gap-2">
+            <span>WhatsApp Chat</span>
+            <span>↗</span>
+          </a>
+          <span class="font-mono text-xs text-slate-500 dark:text-slate-400 ml-1">
+            HR Ops &amp; Automation / Impact-led
+          </span>
+        </div>
+
+      <!-- INTERACTIVE SYSTEM ARCHITECTURE STREAM -->
+      <!-- INTERACTIVE SYSTEM ARCHITECTURE STREAM -->
+      <div class="mb-10 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-[#0e131d]/90 p-4 sm:p-5 shadow-sm">
+        <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-slate-200/70 dark:border-slate-800/80 font-mono text-[11px] text-slate-500 dark:text-slate-400">
+          <div class="flex items-center gap-2">
+            <span class="text-emerald-600 dark:text-emerald-400 font-semibold">01 — Raw HR inputs · Automated at scale</span>
+            <span class="hidden sm:inline text-slate-400">|</span>
+            <span class="hidden sm:inline">Click any node to inspect pipeline</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span id="streamClock" class="text-slate-700 dark:text-slate-300 font-semibold">T+00.5s</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">24h/mo → 1h/mo</span>
+          </div>
+        </div>
+
+        <!-- 3-Stage Pipeline Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-11 gap-3 items-center">
+          <!-- Sources -->
+          <div class="lg:col-span-3 space-y-2">
+            <button type="button" data-node="src1" class="pipeline-node w-full text-left p-2.5 rounded-lg border border-emerald-500/50 bg-emerald-500/5 dark:bg-emerald-500/10 transition flex items-center justify-between">
+              <div>
+                <div class="font-mono text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">SRC.01</div>
+                <div class="text-xs font-semibold text-slate-900 dark:text-white">Offer Master</div>
+              </div>
+              <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300">XLSX</span>
+            </button>
+            <button type="button" data-node="src2" class="pipeline-node w-full text-left p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 bg-slate-50 dark:bg-slate-900/60 transition flex items-center justify-between">
+              <div>
+                <div class="font-mono text-[10px] text-slate-500 dark:text-slate-400 font-semibold">SRC.02</div>
+                <div class="text-xs font-semibold text-slate-900 dark:text-white">Attendance Logs</div>
+              </div>
+              <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300">RAW</span>
+            </button>
+            <button type="button" data-node="src3" class="pipeline-node w-full text-left p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 bg-slate-50 dark:bg-slate-900/60 transition flex items-center justify-between">
+              <div>
+                <div class="font-mono text-[10px] text-slate-500 dark:text-slate-400 font-semibold">SRC.03</div>
+                <div class="text-xs font-semibold text-slate-900 dark:text-white">Darwinbox &amp; PeopleSoft</div>
+              </div>
+              <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300">HRIS</span>
+            </button>
+          </div>
+
+          <!-- Connector SVG 1 -->
+          <div class="hidden lg:flex lg:col-span-1 justify-center">
+            <svg width="60" height="90" viewBox="0 0 60 90" fill="none">
+              <path d="M2 15 C30 15, 30 45, 58 45" stroke="#10b981" stroke-width="1.5" class="stream-line" />
+              <path d="M2 45 L58 45" stroke="#10b981" stroke-width="1.5" class="stream-line" />
+              <path d="M2 75 C30 75, 30 45, 58 45" stroke="#10b981" stroke-width="1.5" class="stream-line" />
+            </svg>
+          </div>
+
+          <!-- Core Transformation Engine -->
+          <div class="lg:col-span-3">
+            <button type="button" data-node="core" class="pipeline-node w-full text-left p-4 rounded-xl border-2 border-emerald-500/60 bg-gradient-to-br from-emerald-500/10 via-slate-900/5 to-sky-500/10 dark:from-emerald-500/15 dark:via-slate-900 dark:to-sky-500/15 shadow-sm transition">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-mono text-[10px] uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-bold">CORE · Transform</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
+              </div>
+              <div class="text-sm font-bold text-slate-900 dark:text-white">VBA + MS Copilot Engine</div>
+              <div class="mt-1 font-mono text-[11px] text-slate-500 dark:text-slate-400">7 Production Macros · 96% Faster</div>
+            </button>
+          </div>
+
+          <!-- Connector SVG 2 -->
+          <div class="hidden lg:flex lg:col-span-1 justify-center">
+            <svg width="60" height="90" viewBox="0 0 60 90" fill="none">
+              <path d="M2 45 C30 45, 30 15, 58 15" stroke="#38bdf8" stroke-width="1.5" class="stream-line" />
+              <path d="M2 45 L58 45" stroke="#38bdf8" stroke-width="1.5" class="stream-line" />
+              <path d="M2 45 C30 45, 30 75, 58 75" stroke="#38bdf8" stroke-width="1.5" class="stream-line" />
+            </svg>
+          </div>
+
+          <!-- Destinations -->
+          <div class="lg:col-span-3 space-y-2">
+            <button type="button" data-node="dst1" class="pipeline-node w-full text-left p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-sky-500/40 bg-slate-50 dark:bg-slate-900/60 transition flex items-center justify-between">
+              <div>
+                <div class="font-mono text-[10px] text-sky-600 dark:text-sky-400 font-semibold">DST.01</div>
+                <div class="text-xs font-semibold text-slate-900 dark:text-white">9-File Activation Pack</div>
+              </div>
+              <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300">5 CSV + 4 XLSX</span>
+            </button>
+            <button type="button" data-node="dst2" class="pipeline-node w-full text-left p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-sky-500/40 bg-slate-50 dark:bg-slate-900/60 transition flex items-center justify-between">
+              <div>
+                <div class="font-mono text-[10px] text-sky-600 dark:text-sky-400 font-semibold">DST.02</div>
+                <div class="text-xs font-semibold text-slate-900 dark:text-white">Dynamic Outlook Drafts</div>
+              </div>
+              <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300">TO / CC</span>
+            </button>
+            <button type="button" data-node="dst3" class="pipeline-node w-full text-left p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:border-sky-500/40 bg-slate-50 dark:bg-slate-900/60 transition flex items-center justify-between">
+              <div>
+                <div class="font-mono text-[10px] text-sky-600 dark:text-sky-400 font-semibold">DST.03</div>
+                <div class="text-xs font-semibold text-slate-900 dark:text-white">Executive MIS &amp; Audits</div>
+              </div>
+              <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-600 dark:text-slate-300">LIVE</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Node Telemetry Readout Bar -->
+        <div class="mt-3 pt-3 border-t border-slate-200/70 dark:border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+          <div>
+            <span id="nodeInspectCode" class="font-mono text-[11px] font-bold text-emerald-600 dark:text-emerald-400">SRC.01 · INPUT STREAM</span>
+            <span class="mx-1.5 text-slate-400">—</span>
+            <strong id="nodeInspectTitle" class="text-slate-900 dark:text-white">Offer Master &amp; Pre-Offer Data:</strong>
+            <span id="nodeInspectDesc" class="text-slate-600 dark:text-slate-300 ml-1">Password-protected PAN-India Offer Master workbooks, candidate KYC records, and compensation fitment sheets ingested directly by VBA automation.</span>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- 4 KEY METRIC CARDS -->
+      <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-[#0e131d]/80">
+          <div class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white">9+</div>
+          <div class="mt-1 text-xs font-mono text-slate-500 dark:text-slate-400">Years operational experience (4.5+ yrs BFSI HR Ops)</div>
+        </div>
+        <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-[#0e131d]/80">
+          <div class="text-3xl sm:text-4xl font-black tracking-tight text-emerald-600 dark:text-emerald-400">7</div>
+          <div class="mt-1 text-xs font-mono text-slate-500 dark:text-slate-400">Live production VBA macros deployed at Kotak Neo</div>
+        </div>
+        <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-[#0e131d]/80">
+          <div class="text-3xl sm:text-4xl font-black tracking-tight text-sky-600 dark:text-sky-400">96%</div>
+          <div class="mt-1 text-xs font-mono text-slate-500 dark:text-slate-400">Cycle-time reduction (24h/mo compressed to 1h/mo)</div>
+        </div>
+        <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-[#0e131d]/80">
+          <div class="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white">100%</div>
+          <div class="mt-1 text-xs font-mono text-slate-500 dark:text-slate-400">Onboarding TAT SLA &amp; zero audit discrepancies</div>
+        </div>
+      </div>
+
+      <!-- TRUSTED INSIDE BAR -->
+      <div class="mt-10 pt-8 border-t border-slate-200/70 dark:border-slate-800/70 flex flex-wrap items-center justify-between gap-4">
+        <span class="font-mono text-xs uppercase tracking-widest text-slate-400 dark:text-slate-500">Trusted inside</span>
+        <div class="flex flex-wrap items-center gap-6 sm:gap-10 font-mono text-sm font-bold text-slate-700 dark:text-slate-300">
+          <span>Kotak Neo <span class="text-xs font-normal text-slate-400">(Kotak Securities)</span></span>
+          <span>ICICI Bank</span>
+          <span>Aadya Habitat LLP</span>
+          <span>Zipgrid</span>
+        </div>
+      </div>
+
+      <div class="mt-10 flex items-center justify-between font-mono text-xs text-slate-500 dark:text-slate-400">
+        <span>End of stream · 01/05</span>
+        <a href="#work" class="text-slate-900 dark:text-white font-bold hover:text-emerald-500 transition">Next → SELECTED WORK.</a>
+      </div>
+    </section>
+
+    <!-- SECTION 01: SELECTED WORK (CAREER ENVIRONMENTS) -->
+    <section id="work" data-stream="01 — Selected Work" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-b border-slate-200 dark:border-slate-800/80">
+      <div class="font-mono text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2">
+        01 — Selected Work &amp; Career Architecture
+      </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+        <h2 class="display-section uppercase text-slate-900 dark:text-white">
+          COMPLEXITY.<br />RESOLVED.
+        </h2>
+        <div class="font-mono text-sm text-slate-600 dark:text-slate-300">
+          Four environments.<br />
+          <span class="text-slate-900 dark:text-white font-bold">One operational method.</span>
+        </div>
+      </div>
+
+      <!-- Split Interactive Work Explorer -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <!-- Left Role Selector List -->
+        <div id="roleSelectorList" class="lg:col-span-5 space-y-3"></div>
+
+        <!-- Right System Overview Preview Panel -->
+        <div class="lg:col-span-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0e131d] p-6 sm:p-8 shadow-sm">
+          <div class="flex items-center justify-between gap-2 pb-4 mb-5 border-b border-slate-200 dark:border-slate-800 font-mono text-xs">
+            <span id="rolePreviewIndex" class="text-emerald-600 dark:text-emerald-400 font-bold">Preview — 01</span>
+            <span id="rolePreviewPeriod" class="text-slate-500 dark:text-slate-400">May 2026 — Present</span>
+          </div>
+
+          <div id="rolePreviewArchTitle" class="font-mono text-[11px] uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">
+            01 / HR WORKFLOW AUTOMATION &amp; DARWINBOX ARCHITECTURE
+          </div>
+
+          <!-- Architecture Node Pills -->
+          <div id="rolePreviewNodes" class="flex flex-wrap gap-1.5 mb-5"></div>
+
+          <div id="rolePreviewTag" class="font-mono text-xs text-sky-600 dark:text-sky-400 mb-2"></div>
+          <h3 id="rolePreviewTitle" class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white"></h3>
+          <p id="rolePreviewSummary" class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+
+          <ul id="rolePreviewBullets" class="mt-5 space-y-2.5 text-sm text-slate-700 dark:text-slate-300"></ul>
+
+          <!-- Operational Context Metrics -->
+          <div class="mt-6 pt-5 border-t border-slate-200 dark:border-slate-800">
+            <div class="font-mono text-[11px] uppercase tracking-wider text-slate-400 mb-3">Operational context &amp; verified outcomes</div>
+            <div id="rolePreviewMetrics" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 flex items-center justify-between font-mono text-xs text-slate-500 dark:text-slate-400">
+        <span>End of stream · 02/05</span>
+        <a href="#macros" class="text-slate-900 dark:text-white font-bold hover:text-emerald-500 transition">Next → 07 PRODUCTION MACROS.</a>
+      </div>
+    </section>
+
+    <!-- SECTION 02: 7 PRODUCTION VBA MACROS & ROI SIMULATOR -->
+    <section id="macros" data-stream="02 — 7 Production Macros" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-b border-slate-200 dark:border-slate-800/80">
+      <div class="font-mono text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2">
+        02 — Automation Systems · Kotak Neo (Sep – Oct 2026)
+      </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <h2 class="display-section uppercase text-slate-900 dark:text-white">
+          SEVEN MACROS.<br />LIVE IN PROD.
+        </h2>
+        <p class="max-w-md text-sm text-slate-600 dark:text-slate-300">
+          Built with <strong class="text-slate-900 dark:text-white">Excel VBA + MS Copilot</strong>, tested in UAT within 15 days, and deployed live across PAN-India HR Operations to replace manual spreadsheet and email bottlenecks.
+        </p>
+      </div>
+
+      <!-- Filter Bar + Interactive ROI Simulator -->
+      <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-8 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-[#0e131d]/90">
+        <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+          <span class="text-slate-400 mr-1">Filter stream:</span>
+          <button type="button" data-macro-filter="all" class="macro-filter-btn px-3 py-1.5 rounded bg-slate-900 text-white dark:bg-emerald-500 dark:text-slate-950 font-semibold transition">All (7)</button>
+          <button type="button" data-macro-filter="onboarding" class="macro-filter-btn px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:opacity-80 transition">Onboarding (1)</button>
+          <button type="button" data-macro-filter="attendance" class="macro-filter-btn px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:opacity-80 transition">Attendance &amp; Payroll (2)</button>
+          <button type="button" data-macro-filter="exit" class="macro-filter-btn px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:opacity-80 transition">Exit &amp; LBC (2)</button>
+          <button type="button" data-macro-filter="governance" class="macro-filter-btn px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:opacity-80 transition">Compliance &amp; Parity (2)</button>
+        </div>
+
+        <div class="flex items-center gap-4 border-t lg:border-t-0 pt-3 lg:pt-0 border-slate-200 dark:border-slate-800 font-mono text-xs">
+          <label for="cycleMultiplier" class="text-slate-500 dark:text-slate-400">Team scale (<span id="cycleMultiplierVal" class="text-slate-900 dark:text-white font-bold">1x</span>):</label>
+          <input id="cycleMultiplier" type="range" min="1" max="5" step="1" value="1" class="w-28 accent-emerald-500 cursor-pointer" />
+          <span class="px-2.5 py-1 rounded bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-bold">
+            Saves <span id="totalHoursSaved">23.0</span>h / mo
+          </span>
+        </div>
+      </div>
+
+      <!-- Macro Cards Grid -->
+      <div id="macroCardsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+
+      <div class="mt-12 flex items-center justify-between font-mono text-xs text-slate-500 dark:text-slate-400">
+        <span>End of stream · 03/05</span>
+        <a href="#about" class="text-slate-900 dark:text-white font-bold hover:text-emerald-500 transition">Next → ABOUT &amp; METHOD.</a>
+      </div>
+    </section>
+
+    <!-- SECTION 03: ABOUT, GRIT & THREE DISCIPLINES -->
+    <section id="about" data-stream="03 — About / Easter Raj" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-b border-slate-200 dark:border-slate-800/80">
+      <div class="font-mono text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2">
+        03 — About / Easter Raj
+      </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+        <h2 class="display-section uppercase text-slate-900 dark:text-white">
+          SYSTEMS SERVING<br />THE BUSINESS.
+        </h2>
+        <div class="font-mono text-sm text-slate-600 dark:text-slate-300">
+          Operational depth.<br />
+          <span class="text-slate-900 dark:text-white font-bold">Automation perspective.</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+        <!-- Narrative Column (Zero past salary figures) -->
+        <div class="lg:col-span-7 space-y-4 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p class="text-lg text-slate-900 dark:text-white font-medium">
+            I work where frontline HR operations meet practical engineering—connecting HRIS platforms, eliminating manual spreadsheet bottlenecks, and keeping every process improvement tied to measurable time savings and audit accuracy.
+          </p>
+          <p>
+            My operational foundation was built through sheer grit and self-reliance in Mumbai. While completing my <strong class="text-slate-900 dark:text-white">Bachelor of Commerce (B.Com)</strong> at the University of Mumbai, I worked early morning shifts and evening sales roles to fund my education, before spending five years managing accounts, statutory registers, and administration across large housing societies including <strong class="text-slate-900 dark:text-white">Satellite Garden CHS</strong>, <strong class="text-slate-900 dark:text-white">Zipgrid (Oberoi Splendor)</strong>, and <strong class="text-slate-900 dark:text-white">Aadya Habitat LLP (Alta Monte Tower C)</strong>.
+          </p>
+          <p>
+            Determined to build a long-term career in the corporate sector, I transitioned into <strong class="text-slate-900 dark:text-white">ICICI Bank</strong> in July 2022. Within two months, I was selected among 33 branch officers to move into HR Operations &amp; Recruitment. After a rigorous two-year evaluation, I was <strong class="text-slate-900 dark:text-white">1 of only 5 professionals retained</strong> from that cohort—managing 100+ monthly retail hires across the West Zone with 100% SLA adherence and zero audit discrepancies.
+          </p>
+          <p>
+            At <strong class="text-slate-900 dark:text-white">Kotak Neo (Kotak Securities Ltd.)</strong>, after managing PAN-India pre-offer operations, I spotted how much time smart HR teams lost to repetitive manual Excel tasks. By pairing <strong class="text-slate-900 dark:text-white">MS Copilot with Excel VBA</strong>, I built and deployed a production macro in 15 days that cut a 24-hour monthly process down to 1 hour—earning a dedicated mandate from senior leadership to automate workflows across HR Operations.
+          </p>
+        </div>
+
+        <!-- Telemetry Identify() Card -->
+        <div class="lg:col-span-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-900 text-slate-100 p-6 font-mono text-xs shadow-lg">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+            <span class="text-emerald-400 font-bold">Profile / identify()</span>
+            <button id="replayIdentifyBtn" type="button" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-[11px] transition">
+              Re-run identify() ↻
+            </button>
+          </div>
+          <pre id="identifyCodeBlock" class="overflow-x-auto leading-relaxed text-[11.5px] text-slate-300 whitespace-pre-wrap"></pre>
+          <div class="mt-4 pt-3 border-t border-slate-800 grid grid-cols-2 gap-3 text-[11px]">
+            <div>
+              <div class="text-slate-400">Education</div>
+              <div class="text-white font-semibold mt-0.5">B.Com · Univ. of Mumbai</div>
+            </div>
+            <div>
+              <div class="text-slate-400">Languages</div>
+              <div class="text-white font-semibold mt-0.5">EN · HI · TA · MR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- THREE DISCIPLINES. ONE SYSTEM. -->
+      <div class="pt-10 border-t border-slate-200 dark:border-slate-800">
+        <div class="font-mono text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-2">
+          IDENTIFY · AUTOMATE · GOVERN METHOD
+        </div>
+        <h3 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-slate-900 dark:text-white mb-8">
+          THREE DISCIPLINES. ONE SYSTEM.
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0e131d]">
+            <div class="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400 mb-2">01</div>
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white">HR Process Automation</h4>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              Excel VBA and MS Copilot engines that turn multi-hour spreadsheet &amp; email routines into single-click execution.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Excel VBA Macros</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MS Copilot GenAI</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Outlook Auto-Drafts</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">UAT to Live</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0e131d]">
+            <div class="font-mono text-xs font-bold text-sky-600 dark:text-sky-400 mb-2">02</div>
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white">HRIS &amp; People Analytics</h4>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              Clean, audit-ready workforce data, bulk CSV activations, and monthly MIS dashboards that leadership can act on.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Darwinbox HRIS</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Oracle PeopleSoft</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">TALLINT HireCraft</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Executive MIS</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0e131d]">
+            <div class="font-mono text-xs font-bold text-emerald-600 dark:text-emerald-400 mb-2">03</div>
+            <h4 class="text-lg font-bold text-slate-900 dark:text-white">Lifecycle &amp; Audit Governance</h4>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+              End-to-end onboarding, attendance controls, grade/CTC parity checks, and exit clearances delivered at 100% SLA.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">PAN-India Onboarding</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Payroll Controls</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">LBC &amp; Exit Governance</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Zero Audit Errors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 flex items-center justify-between font-mono text-xs text-slate-500 dark:text-slate-400">
+        <span>End of stream · 04/05</span>
+        <a href="#notes" class="text-slate-900 dark:text-white font-bold hover:text-emerald-500 transition">Next → FIELD NOTES.</a>
+      </div>
+    </section>
+
+    <!-- SECTION 04: FIELD NOTES -->
+    <section id="notes" data-stream="04 — Field Notes" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-b border-slate-200 dark:border-slate-800/80">
+      <div class="font-mono text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2">
+        04 — Field Notes · Stream · 4 events
+      </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <h2 class="display-section uppercase text-slate-900 dark:text-white">
+          NOTES FROM<br />THE FLOOR.
+        </h2>
+        <p class="max-w-md text-sm text-slate-600 dark:text-slate-300">
+          Observations from an HR Operations &amp; Automation Specialist: what I learn between high-volume onboarding drives, UAT testing, and macro go-lives.
+        </p>
+      </div>
+
+      <div id="notesListContainer" class="space-y-4"></div>
+
+      <div class="mt-12 flex items-center justify-between font-mono text-xs text-slate-500 dark:text-slate-400">
+        <span>End of stream · 05/05</span>
+        <a href="#contact" class="text-slate-900 dark:text-white font-bold hover:text-emerald-500 transition">Next → CONTACT &amp; CV.</a>
+      </div>
+    </section>
+
+    <!-- SECTION 05: CONTACT, CV DOWNLOAD & WHATSAPP COMPOSER -->
+    <section id="contact" data-stream="05 — Contact &amp; CV" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+      <div class="font-mono text-xs uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2">
+        05 — Direct Connection · Mumbai, Maharashtra
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-6">
+          <h2 class="display-section uppercase text-slate-900 dark:text-white">
+            LET'S BUILD<br />RELIABLE HR OPS.
+          </h2>
+          <p class="mt-4 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+            Available for <strong class="text-slate-900 dark:text-white">HR Operations, HR Process Automation, HRIS Governance (Darwinbox / PeopleSoft), and People Analytics</strong> conversations in Mumbai or across India. Download my CV or start a direct WhatsApp chat below.
+          </p>
+
+          <!-- Direct Action Cards -->
+          <div class="mt-6 space-y-3 font-mono text-xs">
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0e131d] flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <div class="text-slate-400">Curriculum Vitae (ATS-Optimized)</div>
+                <div class="text-sm font-bold text-slate-900 dark:text-white mt-0.5">Easter_Raj_Resume_2026</div>
+              </div>
+              <div class="flex items-center gap-2">
+                <button id="downloadCvBottomBtn" type="button" class="px-3.5 py-2 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-950 font-bold hover:opacity-90 transition">
+                  Download CV (.DOC) ↓
+                </button>
+                <button id="printCvBtn" type="button" class="px-3.5 py-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:border-emerald-500 transition">
+                  Print / Save PDF
+                </button>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0e131d] flex items-center justify-between gap-3">
+              <div>
+                <div class="text-slate-400">Direct Email</div>
+                <a href="mailto:easterraj321@gmail.com" class="text-sm font-bold text-slate-900 dark:text-white hover:text-emerald-500 transition">easterraj321@gmail.com</a>
+              </div>
+              <button id="copyEmailBtn" type="button" class="px-3 py-1.5 rounded border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-emerald-500 transition">
+                Copy email
+              </button>
+            </div>
+
+            <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0e131d] flex items-center justify-between gap-3">
+              <div>
+                <div class="text-slate-400">Phone &amp; Location</div>
+                <div class="text-sm font-bold text-slate-900 dark:text-white">+91 9987973836 · Mumbai, Maharashtra</div>
+              </div>
+              <a href="https://www.linkedin.com/in/easter-raj-00348b142/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-emerald-500 transition">
+                LinkedIn ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive WhatsApp Pre-Filled Message Launcher -->
+        <div class="lg:col-span-6 rounded-2xl border border-emerald-500/40 bg-white dark:bg-[#0e131d] p-6 sm:p-8 shadow-sm">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200 dark:border-slate-800 font-mono text-xs">
+            <span class="text-emerald-600 dark:text-emerald-400 font-bold">WhatsApp Direct Dispatch · +91 9987973836</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Online</span>
+          </div>
+
+          <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">
+            Select a quick conversation starter or customize the pre-filled message before opening WhatsApp:
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-4 font-mono text-[11px]">
+            <button type="button" data-wa-preset="Hi Easter, I visited your portfolio website and was impressed by your HR Operations & VBA Automation work. Let's connect!" class="wa-preset-btn px-2.5 py-1.5 rounded border border-emerald-500/40 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-semibold">
+              HR Ops &amp; Automation Role
+            </button>
+            <button type="button" data-wa-preset="Hi Easter, I reviewed your 7 Excel VBA macros and Darwinbox/PeopleSoft experience on your website. Are you open to discussing an HR opportunity?" class="wa-preset-btn px-2.5 py-1.5 rounded border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-emerald-500/40">
+              HRIS &amp; Macro Portfolio
+            </button>
+            <button type="button" data-wa-preset="Hi Easter, great portfolio! Would love to connect regarding HR Operations & People Analytics." class="wa-preset-btn px-2.5 py-1.5 rounded border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-emerald-500/40">
+              Quick Networking
+            </button>
+          </div>
+
+          <label for="waCustomMessage" class="block font-mono text-[11px] text-slate-400 mb-1.5">Pre-filled WhatsApp message:</label>
+          <textarea id="waCustomMessage" rows="4" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/90 p-3 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500">Hi Easter, I visited your portfolio website and was impressed by your HR Operations & VBA Automation work. Let's connect!</textarea>
+
+          <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+            <a id="waDynamicLaunchLink" href="https://wa.me/919987973836?text=Hi%20Easter%2C%20I%20visited%20your%20portfolio%20website%20and%20was%20impressed%20by%20your%20HR%20Operations%20%26%20VBA%20Automation%20work.%20Let%27s%20connect!" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-500 text-slate-950 font-mono text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 transition text-center">
+              Start WhatsApp Chat ↗
+            </a>
+            <span class="font-mono text-[11px] text-slate-400">Opens wa.me/919987973836</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER TELEMETRY BAR -->
+  <footer class="no-print border-t border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-[#090b10]/90 py-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-4 font-mono text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex flex-wrap items-center gap-4">
+        <span>© 2026 Easter Raj</span>
+        <button id="pauseAnimBtn" type="button" class="text-emerald-600 dark:text-emerald-400 hover:underline">
+          Signal: Live — pause animations
+        </button>
+      </div>
+      <div class="flex flex-wrap items-center gap-5">
+        <a href="https://www.linkedin.com/in/easter-raj-00348b142/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition">LinkedIn ↗</a>
+        <a href="https://wa.me/919987973836?text=Hi%20Easter%2C%20I%20visited%20your%20portfolio%20website%20and%20was%20impressed%20by%20your%20HR%20Operations%20%26%20VBA%20Automation%20work.%20Let%27s%20connect!" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition">WhatsApp ↗</a>
+        <button id="downloadCvFooterBtn" type="button" class="hover:text-slate-900 dark:hover:text-white transition">Download CV ↓</button>
+        <a href="#top" class="hover:text-slate-900 dark:hover:text-white transition">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP QUICK BUTTON -->
+  <a href="https://wa.me/919987973836?text=Hi%20Easter%2C%20I%20visited%20your%20portfolio%20website%20and%20was%20impressed%20by%20your%20HR%20Operations%20%26%20VBA%20Automation%20work.%20Let%27s%20connect!" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="no-print fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-emerald-500 text-slate-950 font-mono text-xs font-bold shadow-lg hover:bg-emerald-400 transition">
+    <span class="w-2 h-2 rounded-full bg-slate-950"></span>
+    <span>WhatsApp Easter ↗</span>
+  </a>
+
+  <!-- FIELD NOTE READER MODAL -->
+  <div id="noteModal" class="no-print fixed inset-0 z-50 hidden bg-slate-950/75 backdrop-blur-sm p-4 flex items-center justify-center">
+    <div class="max-w-2xl w-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#11151f] p-6 sm:p-8 shadow-2xl max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200 dark:border-slate-800 font-mono text-xs">
+        <span id="modalNoteMeta" class="text-emerald-600 dark:text-emerald-400 font-bold"></span>
+        <button id="closeNoteModalBtn" type="button" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:opacity-80">Close ✕</button>
+      </div>
+      <h3 id="modalNoteTitle" class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-4"></h3>
+      <div id="modalNoteBody" class="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed"></div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toastBanner" class="no-print fixed bottom-16 right-5 z-50 hidden px-4 py-2.5 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-950 font-mono text-xs font-semibold shadow-lg">
+    Action completed
+  </div>
+
+  <!-- PRINTABLE CV SHEET (FOR PRINT / SAVE AS PDF) -->
+  <section id="printCvSheet" class="hidden p-8 max-w-4xl mx-auto text-black bg-white">
+    <h1 class="text-2xl font-bold">EASTER RAJ</h1>
+    <p class="text-sm font-semibold text-blue-800">HR Operations &amp; Process Automation Specialist | HRIS (Darwinbox &amp; Oracle PeopleSoft) | People Operations &amp; Analytics</p>
+    <p class="text-xs text-gray-700 mt-1">Mumbai, Maharashtra | +91 9987973836 | easterraj321@gmail.com | linkedin.com/in/easter-raj-00348b142</p>
+    <hr class="my-3 border-gray-300" />
+    <h2 class="text-sm font-bold uppercase mt-3">Executive Summary</h2>
+    <p class="text-xs leading-relaxed mt-1">
+      Results-driven HR Operations &amp; Process Automation Specialist with 9+ years of total operational experience, including 4.5+ years in enterprise BFSI HR Operations at Kotak Neo (Kotak Securities Ltd.) and ICICI Bank Ltd. Proven track record of transforming manual HR lifecycle workflows into automated, audit-ready systems using Excel VBA Macros, MS Copilot (GenAI), Darwinbox HRIS, and Oracle PeopleSoft. Engineered 7 live production VBA macros at Kotak Neo—reducing a 24-hour monthly manual cycle to 1 hour (96% time savings)—and managed 100+ monthly West Zone onboardings at ICICI Bank with 100% SLA adherence and zero audit discrepancies.
+    </p>
+    <h2 class="text-sm font-bold uppercase mt-4">Professional Experience</h2>
+    <div class="mt-2 text-xs space-y-2">
+      <div>
+        <strong>Team Member — HR Operations &amp; Process Automation | Kotak Neo (Kotak Securities Ltd.), Mumbai (May 2026 – Present)</strong>
+        <p>Delivered first live VBA automation macro from UAT to production in 15 days (saving 23 hours/month); relieved of routine transactional work by senior leadership to architect 7 live VBA macros across Onboarding, Attendance, Payroll, and Exit governance; publishes monthly HR MIS dashboards on Darwinbox HRIS.</p>
+      </div>
+      <div>
+        <strong>HR Operations &amp; Recruitment Executive | ICICI Bank Limited, Mumbai (Sep 2022 – May 2026)</strong>
+        <p>Retained as 1 of only 5 top performers out of 33 internal transfers from branch banking after a 2-year evaluation; managed 100+ monthly retail hires across the West Zone with 100% TAT SLA adherence and zero discrepancies on Oracle PeopleSoft and TALLINT HireCraft ATS.</p>
+      </div>
+      <div>
+        <strong>Relationship Manager — Branch Banking | ICICI Bank Limited, Mumbai (Jul 2022 – Sep 2022)</strong>
+        <p>Managed retail banking operations and KYC compliance before earning fast-track selection into HR Operations within 2 months.</p>
+      </div>
+      <div>
+        <strong>Society Manager — Accounts, Administration &amp; Compliance | Aadya Habitat LLP · Zipgrid · Satellite Garden CHS, Mumbai (Jun 2017 – Jul 2022)</strong>
+        <p>Managed end-to-end accounting, billing, statutory compliance registers, vendor contracts, and audit documentation across residential complexes.</p>
+      </div>
+    </div>
+    <h2 class="text-sm font-bold uppercase mt-4">Education &amp; Languages</h2>
+    <p class="text-xs mt-1"><strong>Bachelor of Commerce (B.Com)</strong> — Vivek College of Commerce, University of Mumbai (April 2017) | <strong>Languages:</strong> English, Hindi, Tamil, Marathi</p>
+  </section>
+
+  <script>
+    const ROLES_DATA = [{"id": "kotak", "num": "01", "company": "Kotak Neo (Kotak Securities Ltd.)", "role": "Team Member \u2014 HR Operations & Process Automation", "period": "May 2026 \u2014 Present", "location": "Mumbai, Maharashtra", "tag": "HR Automation / Darwinbox HRIS / PAN-India Lifecycle", "archTitle": "01 / HR WORKFLOW AUTOMATION & DARWINBOX ARCHITECTURE", "nodes": ["OFFER MASTER", "ATTENDANCE LOGS", "VBA + COPILOT", "DARWINBOX CSVS", "OUTLOOK DRAFTS", "MIS DASHBOARDS"], "summary": "Transitioned from managing PAN-India pre-offer operations into a dedicated HR Process Automation role after building a working Excel VBA + MS Copilot prototype and demonstrating it to senior leadership.", "bullets": ["Delivered the first production automation macro from UAT to live deployment in 15 days, reducing a 24-hour monthly manual workflow to 1 hour (saving 23 hours/month).", "Relieved of routine transactional workload by senior leadership to identify, analyze, and automate manual Excel processes across HR Operations.", "Designed, tested, and launched 7 full-scale production VBA macros between September and October 2026 across Onboarding, Attendance, Payroll, and Exit governance.", "Publishes monthly HR MIS reports, leadership dashboards, and hierarchy/compensation parity audits using Darwinbox HRIS."], "metrics": [{"label": "Cycle-time reduction", "val": "96% (24h \u2192 1h)", "meta": "Kotak Neo \u00b7 Live in Production"}, {"label": "Production VBA tools", "val": "7 Live Macros", "meta": "Sep \u2013 Oct 2026 \u00b7 UAT Verified"}, {"label": "Core HRIS platform", "val": "Darwinbox", "meta": "PAN-India Operations"}]}, {"id": "icici-hr", "num": "02", "company": "ICICI Bank Limited", "role": "HR Operations & Recruitment Executive", "period": "Sep 2022 \u2014 May 2026", "location": "Mumbai, Maharashtra", "tag": "West Zone Onboarding / Oracle PeopleSoft / Audit Compliance", "archTitle": "02 / HIGH-VOLUME RETAIL ONBOARDING & PEOPLESOFT GOVERNANCE", "nodes": ["HIRECRAFT ATS", "PRE-BOARDING", "KYC & DOC AUDIT", "ORACLE PEOPLESOFT", "100+ MONTHLY HIRES", "WEST ZONE MIS"], "summary": "Managed end-to-end employee onboarding, documentation compliance, and HRIS lifecycle validation for high-volume retail banking recruitment across the West Zone.", "bullets": ["Selected among 33 branch banking officers for internal transfer into HR Operations and retained as 1 of only 5 top performers after a rigorous 2-year evaluation.", "Directed onboarding operations for 100+ monthly retail hires across the West Zone with 100% adherence to Turnaround Time (TAT) SLAs.", "Validated employee lifecycle records, KYC documentation, and joining compliance in Oracle PeopleSoft HRIS and TALLINT HireCraft ATS with zero audit discrepancies.", "Built daily joining trackers and monthly HR operations dashboards while driving pre-boarding candidate engagement to improve offer-to-join conversion."], "metrics": [{"label": "Monthly onboarding volume", "val": "100+ Hires/Mo", "meta": "ICICI Bank \u00b7 West Zone"}, {"label": "Internal talent retention", "val": "Top 5 of 33", "meta": "2-Year Performance Review"}, {"label": "SLA & audit accuracy", "val": "100% / 0 Errors", "meta": "Oracle PeopleSoft & HireCraft"}]}, {"id": "icici-rm", "num": "03", "company": "ICICI Bank Limited", "role": "Relationship Manager \u2014 Branch Banking", "period": "Jul 2022 \u2014 Sep 2022", "location": "Mumbai, Maharashtra", "tag": "Retail Banking Operations / KYC Governance / Client Portfolio", "archTitle": "03 / FRONT-LINE BANKING OPERATIONS & FAST-TRACK HR SELECTION", "nodes": ["CLIENT ONBOARDING", "KYC VERIFICATION", "BRANCH OPS", "PROCESS DISCIPLINE", "FAST-TRACK HR TRANSFER"], "summary": "Executed front-line retail banking operations, regulatory KYC compliance, and client servicing before earning fast-track selection into the regional HR Operations team within 2 months.", "bullets": ["Managed day-to-day retail banking transactions, customer documentation, and regulatory KYC compliance with strict adherence to banking audit standards.", "Demonstrated strong operational discipline and stakeholder coordination, earning selection into the regional HR Operations & Recruitment function inside 60 days."], "metrics": [{"label": "Fast-track transition", "val": "2 Months", "meta": "Branch Banking \u2192 HR Operations"}, {"label": "Compliance standard", "val": "100% KYC Audit", "meta": "Retail Banking Division"}, {"label": "Operational base", "val": "Mumbai", "meta": "ICICI Bank Limited"}]}, {"id": "foundational", "num": "04", "company": "Aadya Habitat LLP \u00b7 Zipgrid \u00b7 Satellite Garden CHS", "role": "Society Manager \u2014 Accounts, Administration & Compliance", "period": "Jun 2017 \u2014 Jul 2022", "location": "Mumbai, Maharashtra", "tag": "Multi-Site Administration / Statutory Registers / Accounting", "archTitle": "04 / MULTI-SITE ADMINISTRATION, ACCOUNTING & STATUTORY COMPLIANCE", "nodes": ["BILLING & ACCOUNTS", "STATUTORY REGISTERS", "VENDOR SLAS", "AUDIT GOVERNANCE", "COMMITTEE OPS"], "summary": "Five years of progressive operational leadership managing administration, financial accounting, vendor contracts, and statutory compliance across residential complexes in Mumbai.", "bullets": ["Aadya Habitat LLP (Alta Monte Tower C CHS, Aug 2020 \u2013 Jul 2022): Directed end-to-end society administration, accounting ledgers, vendor SLAs, and statutory audit compliance.", "Myashiana Management Services Pvt. Ltd. / Zipgrid (Oberoi Splendor, Jan 2020 \u2013 Aug 2020): Managed statutory compliance registers, documentation governance, and resident operations.", "Satellite Garden D-1 C.H.S. Ltd. (Jun 2017 \u2013 Dec 2019): Handled billing cycles, financial record-keeping, committee meetings, and facility operations alongside completing B.Com."], "metrics": [{"label": "Foundational tenure", "val": "5 Years", "meta": "Jun 2017 \u2013 Jul 2022"}, {"label": "Core focus", "val": "Audit & Accounts", "meta": "Statutory Governance"}, {"label": "Organizations served", "val": "3 Entities", "meta": "Mumbai Residential Operations"}]}];
+    const MACROS_DATA = [{"id": "m1", "code": "M.01", "category": "onboarding", "name": "Today's Joiner Multi-File & Darwinbox Activation Engine", "tag": "Onboarding \u00b7 Darwinbox CSVs \u00b7 Outlook Automation", "manualHrs": 8.0, "autoHrs": 0.25, "output": "1 Dated Folder + 5 Darwinbox CSVs + 4 Stakeholder XLSX + 4 Outlook Drafts", "desc": "Unlocks the password-protected Offer Master, filters daily joiners, creates a dated directory, generates 9 formatted files (5 Darwinbox bulk-upload CSVs for employee activation + 4 XLSX trackers for HRRMs, Payroll, IT, and Bank salary account opening), and auto-drafts Outlook emails with mapped attachments and recipients.", "steps": ["Unlock Offer Master", "Filter Today's Joiners", "Generate 5 Darwinbox CSVs", "Build 4 Stakeholder XLSX", "Auto-Draft Outlook Emails"]}, {"id": "m2", "code": "M.02", "category": "attendance", "name": "Absconding Identification & Dynamic HRRM/RHR Escalator", "tag": "Attendance Governance \u00b7 Dynamic To/CC Routing", "manualHrs": 5.0, "autoHrs": 0.2, "output": "Ageing Bucket Summary (6d, 7\u201314d, >14d) + Dynamic HRRM/RHR Emails", "desc": "Filters raw attendance data to identify employees with 6+ consecutive days of unapproved absence, categorizes cases into ageing buckets (6 Days, 7\u201314 Days, >14 Days), builds an HRRM-wise summary table, and drafts Outlook escalation emails with output files attached\u2014dynamically placing HRRMs in 'To' and mapped Regional HRs (RHRs) in 'CC'.", "steps": ["Ingest Attendance Logs", "Filter 6+ Days Unapproved", "Bucket by Ageing Tier", "Map HRRM (To) & RHR (CC)", "Draft Escalation Emails"]}, {"id": "m3", "code": "M.03", "category": "attendance", "name": "3-Day Continuous Absenteeism Payroll Cut-Off Alert", "tag": "Payroll Protection \u00b7 Attendance Regularization", "manualHrs": 3.5, "autoHrs": 0.15, "output": "3+ Continuous Absenteeism Exception Report + Reminder Triggers", "desc": "Identifies employees with 3 or more continuous unregularized absent days ahead of monthly payroll lock, enabling proactive regularization reminders before cycle cutoff and preventing salary holds or post-payroll recovery disputes.", "steps": ["Scan Rolling Attendance", "Detect 3+ Continuous Days", "Cross-Check Regularization", "Compile Payroll Alert List", "Trigger Reminder Workflow"]}, {"id": "m4", "code": "M.04", "category": "exit", "name": "Notice Period Ledger Balance Confirmation (LBC) Tracker", "tag": "Exit Clearance \u00b7 Master File Sync \u00b7 Payroll Alert", "manualHrs": 3.0, "autoHrs": 0.15, "output": "Updated LBC Master File + Pending Clearance Emails to Payroll/Finance", "desc": "Identifies resigned employees serving notice periods whose Ledger Balance Confirmation (LBC) is still pending, automatically appends new cases into the LBC Master Tracker without duplicates, and drafts follow-up emails to Payroll and finance clearance teams.", "steps": ["Read Active Exit Dump", "Check LBC Confirmation Status", "Append New Cases to Master", "Segment Pending Clearances", "Draft Payroll & Finance Alerts"]}, {"id": "m5", "code": "M.05", "category": "exit", "name": "Pending Resignation Approval & Days-to-LWD Escalator", "tag": "Exit Governance \u00b7 LWD Urgency Bucketing", "manualHrs": 2.0, "autoHrs": 0.1, "output": "Days-to-LWD Urgency Bucket Dashboard + HRRM Reminder Drafts", "desc": "Detects resignations awaiting reporting manager approval, calculates countdown urgency across 'Days to Last Working Day (LWD)' buckets, and generates targeted reminder summaries for respective HRRMs to prevent last-minute exit bottlenecks.", "steps": ["Scan Resignation Queue", "Filter Manager Approval Pending", "Calculate Days-to-LWD Buckets", "Group by Assigned HRRM", "Dispatch Escalation Drafts"]}, {"id": "m6", "code": "M.06", "category": "governance", "name": "Manager\u2013Subordinate Grade & CTC Parity Audit Dashboard", "tag": "Compensation & Hierarchy Audit \u00b7 Executive Dashboard", "manualHrs": 1.5, "autoHrs": 0.1, "output": "Executive Parity Dashboard + Grade/CTC Exception List", "desc": "Audits organization-wide reporting hierarchies to flag structural anomalies where a direct report holds an equal or higher Grade or CTC than their reporting manager, producing an executive summary dashboard and actionable exception list.", "steps": ["Map Employee-Manager Tree", "Compare Grade & CTC Tiers", "Flag Parity Anomalies", "Render Executive Dashboard", "Export Audit Exception Sheet"]}, {"id": "m7", "code": "M.07", "category": "governance", "name": "Dealer Landline Regulatory Compliance Auditor", "tag": "Dealing Room Compliance \u00b7 Automated HRRM Follow-Up", "manualHrs": 1.0, "autoHrs": 0.05, "output": "Non-Compliant Dealer List + HRRM Action Emails", "desc": "Scans active dealing-room employee records to identify dealers missing mandatory recorded landline numbers in the system and auto-drafts compliance follow-up emails to respective HRRMs.", "steps": ["Filter Dealing Room Roles", "Verify Landline Field Status", "Extract Missing Records", "Group by Regional HRRM", "Generate Compliance Emails"]}];
+    const NOTES_DATA = [{"num": "01", "topic": "Automation", "read": "3 min read", "date": "Oct 2026", "title": "Why Smart HR Teams Still Work Manually\u2014And How to Fix It by Shipping a Prototype", "summary": "Pointing out process gaps rarely changes how a team works. Building a working VBA + Copilot prototype and demonstrating 23 hours of monthly time savings does.", "body": ["When I joined Kotak Neo in May 2026 handling PAN-India pre-offer operations, I noticed a pattern common across high-volume HR teams: the people were sharp and dedicated, but nearly every recurring workflow lived inside manual Excel spreadsheets.", "Instead of merely raising a complaint about traditional ways of working, I dissected the most repetitive workflow and used MS Copilot alongside Excel VBA to engineer a working automation macro. I presented the working prototype directly to my manager and senior leader.", "Seeing the live demonstration immediately shifted the conversation. My senior leader added his own architectural inputs, and within 15 days of UAT testing, our first production macro went live\u2014compressing a 24-hour monthly manual process down to 1 hour. Soon after, I was relieved of routine transactional work and given a mandate to identify, analyze, and automate manual processes across the entire HR Operations team."]}, {"num": "02", "topic": "Architecture", "read": "4 min read", "date": "Oct 2026", "title": "One Click, Nine Files: Engineering the Today's Joiner & Darwinbox Activation Pipeline", "summary": "How automating 5 Darwinbox bulk-upload CSVs, 4 stakeholder trackers, and Outlook email drafts eliminated morning onboarding bottlenecks.", "body": ["Every morning in HR Operations begins with the same critical dependency: activating today's joiners in Darwinbox HRIS while simultaneously notifying HRRMs, Payroll, IT provisioning, and banking partners for salary account creation.", "Doing this manually meant unlocking the password-protected Offer Master, filtering rows, copying columns into 9 separate templates, saving 5 distinct CSV formats for Darwinbox bulk upload, formatting 4 XLSX trackers, and composing individual emails without mixing up attachments.", "By codifying the entire pipeline into a single VBA engine, the macro now unlocks the master sheet, creates a dated daily folder, exports all 5 Darwinbox CSVs and 4 stakeholder workbooks with exact schema rules, and populates Outlook draft emails with the right attachments and recipients in seconds."]}, {"num": "03", "topic": "Governance", "read": "3 min read", "date": "Sep 2026", "title": "Preventing Payroll Surprises with Automated Absenteeism & LBC Controls", "summary": "Why proactive 3-day absence alerts, 6+ day dynamic escalations, and notice-period ledger checks are essential for zero-discrepancy payroll governance.", "body": ["Attendance anomalies and unconfirmed exit balances are two of the biggest sources of last-minute payroll friction. Waiting until month-end cutoff to spot unregularized absences or missing Ledger Balance Confirmations (LBC) creates avoidable escalations.", "To solve this upstream, I built three interlocking governance macros: an Absconding Tool that segments 6+ days of unapproved absence into ageing buckets (6 days, 7\u201314 days, >14 days) and dynamically routes HRRMs in 'To' and Regional HRs in 'CC'; a 3-Day Continuous Absenteeism control that flags cases before payroll lock; and an LBC tracker that syncs active notice-period exits and alerts Payroll automatically.", "Together, these controls turn reactive month-end firefighting into predictable, auditable daily governance."]}, {"num": "04", "topic": "Ownership", "read": "3 min read", "date": "Aug 2026", "title": "1 of 5 Retained Out of 33: What High-Volume BFSI HR Operations Taught Me About Precision", "summary": "Lessons from managing 100+ monthly retail onboardings at ICICI Bank with 100% SLA adherence and zero audit discrepancies.", "body": ["Early in my career at ICICI Bank, I was one of 33 branch banking officers selected to transition internally into the HR Operations and Recruitment team. The learning curve was steep: managing 100+ monthly retail hires across the West Zone while maintaining strict regulatory compliance in Oracle PeopleSoft and TALLINT HireCraft ATS.", "Two years later, following rigorous performance and quality evaluations, only 5 of the original 33 internal transfers remained in the HR team\u2014and I was proud to be one of them.", "That experience taught me a foundational rule that guides my automation work today: speed only matters when paired with 100% Turnaround Time (TAT) SLA adherence and zero audit discrepancies."]}];
+    const PIPELINE_NODES = {"src1": {"code": "SRC.01 \u00b7 INPUT STREAM", "title": "Offer Master & Pre-Offer Data", "desc": "Password-protected PAN-India Offer Master workbooks, candidate KYC records, and compensation fitment sheets ingested directly by VBA automation."}, "src2": {"code": "SRC.02 \u00b7 INPUT STREAM", "title": "Biometric & Attendance Logs", "desc": "Raw daily attendance dumps scanned for 3+ continuous unregularized absences and 6+ day absconding ageing buckets (6d, 7\u201314d, >14d)."}, "src3": {"code": "SRC.03 \u00b7 INPUT STREAM", "title": "Darwinbox & PeopleSoft HRIS", "desc": "Enterprise HRIS lifecycle feeds covering active hierarchy, grade/CTC parity, pending resignation approvals, and notice-period LBC status."}, "core": {"code": "CORE \u00b7 TRANSFORMATION ENGINE", "title": "VBA + MS Copilot Automation Core", "desc": "7 live UAT-verified VBA engines transforming 24 hours of monthly manual Excel & email operations into 1 hour of automated execution (-95.8% cycle time)."}, "dst1": {"code": "DST.01 \u00b7 OUTPUT STREAM", "title": "9-File Onboarding & Darwinbox Pack", "desc": "Auto-generates 5 Darwinbox bulk-upload CSVs for instant employee activation plus 4 stakeholder XLSX trackers (HRRM, Payroll, IT, Bank Salary A/C)."}, "dst2": {"code": "DST.02 \u00b7 OUTPUT STREAM", "title": "Dynamic Outlook Escalation Drafts", "desc": "Programmatically builds Outlook emails with mapped file attachments, dynamically routing respective HRRMs in 'To' and Regional HRs (RHRs) in 'CC'."}, "dst3": {"code": "DST.03 \u00b7 OUTPUT STREAM", "title": "Executive MIS & Parity Dashboards", "desc": "Delivers monthly HR MIS packs, Days-to-LWD exit urgency summaries, Dealer landline compliance audits, and Manager-Subordinate Grade/CTC parity dashboards."}};
+
+    let activeRoleId = ROLES_DATA[0].id;
+    let activeMacroFilter = 'all';
+    let animationsPaused = false;
+    let streamSeconds = 0.5;
+
+    function showToast(msg) {
+      const t = document.getElementById('toastBanner');
+      if (!t) return;
+      t.textContent = msg;
+      t.classList.remove('hidden');
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => t.classList.add('hidden'), 2600);
+    }
+
+    function selectPipelineNode(key) {
+      const info = PIPELINE_NODES[key];
+      if (!info) return;
+      document.getElementById('nodeInspectCode').textContent = info.code;
+      document.getElementById('nodeInspectTitle').textContent = info.title + ':';
+      document.getElementById('nodeInspectDesc').textContent = info.desc;
+
+      document.querySelectorAll('.pipeline-node').forEach(btn => {
+        if (btn.getAttribute('data-node') === key) {
+          btn.classList.add('ring-2', 'ring-emerald-500');
+        } else {
+          btn.classList.remove('ring-2', 'ring-emerald-500');
+        }
+      });
+    }
+
+    function renderRoles() {
+      const listEl = document.getElementById('roleSelectorList');
+      if (!listEl) return;
+      listEl.innerHTML = ROLES_DATA.map(r => {
+        const isSelected = r.id === activeRoleId;
+        return `
+          <button type="button" data-role-id="${r.id}" class="role-select-btn w-full text-left p-5 rounded-xl border transition flex items-start justify-between gap-3 ${
+            isSelected
+              ? 'border-emerald-500 bg-emerald-500/10 dark:bg-emerald-500/10 shadow-sm'
+              : 'border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-[#0e131d]/70 hover:border-slate-400 dark:hover:border-slate-700'
+          }">
+            <div>
+              <div class="font-mono text-xs font-bold ${isSelected ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-400'}">${r.num}</div>
+              <div class="text-base font-bold text-slate-900 dark:text-white mt-0.5">${r.company}</div>
+              <div class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">${r.role}</div>
+            </div>
+            <span class="font-mono text-[11px] text-slate-500 dark:text-slate-400 shrink-0">${r.period}</span>
+          </button>
+        `;
+      }).join('');
+
+      document.querySelectorAll('.role-select-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeRoleId = btn.getAttribute('data-role-id');
+          renderRoles();
+        });
+      });
+
+      const active = ROLES_DATA.find(r => r.id === activeRoleId) || ROLES_DATA[0];
+      document.getElementById('rolePreviewIndex').textContent = `Preview — ${active.num}`;
+      document.getElementById('rolePreviewPeriod').textContent = `${active.period} · ${active.location}`;
+      document.getElementById('rolePreviewArchTitle').textContent = active.archTitle;
+      document.getElementById('rolePreviewTag').textContent = active.tag;
+      document.getElementById('rolePreviewTitle').textContent = `${active.company} — ${active.role}`;
+      document.getElementById('rolePreviewSummary').textContent = active.summary;
+
+      document.getElementById('rolePreviewNodes').innerHTML = active.nodes.map(n =>
+        `<span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 font-mono text-[10px] font-semibold text-slate-700 dark:text-slate-200">${n}</span>`
+      ).join('');
+
+      document.getElementById('rolePreviewBullets').innerHTML = active.bullets.map(b =>
+        `<li class="flex items-start gap-2.5"><span class="text-emerald-500 font-mono font-bold mt-0.5">→</span><span>${b}</span></li>`
+      ).join('');
+
+      document.getElementById('rolePreviewMetrics').innerHTML = active.metrics.map(m => `
+        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-900/70 border border-slate-200/70 dark:border-slate-800">
+          <div class="font-mono text-[10px] text-slate-400">${m.label}</div>
+          <div class="text-base font-extrabold text-slate-900 dark:text-white mt-0.5">${m.val}</div>
+          <div class="font-mono text-[10px] text-emerald-600 dark:text-emerald-400 mt-0.5">${m.meta}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderMacros() {
+      const grid = document.getElementById('macroCardsGrid');
+      if (!grid) return;
+      const mult = parseInt(document.getElementById('cycleMultiplier').value || '1', 10);
+      document.getElementById('cycleMultiplierVal').textContent = `${mult}x`;
+      document.getElementById('totalHoursSaved').textContent = (23 * mult).toFixed(1);
+
+      const filtered = activeMacroFilter === 'all'
+        ? MACROS_DATA
+        : MACROS_DATA.filter(m => m.category === activeMacroFilter);
+
+      grid.innerHTML = filtered.map(m => {
+        const saved = ((m.manualHrs - m.autoHrs) * mult).toFixed(1);
+        return `
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0e131d] flex flex-col justify-between shadow-sm">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3 font-mono text-xs">
+                <span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-bold">${m.code}</span>
+                <span class="text-slate-400">${m.tag}</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white">${m.name}</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">${m.desc}</p>
+
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                ${m.steps.map((s, idx) => `
+                  <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 font-mono text-[10px] text-slate-600 dark:text-slate-300">
+                    0${idx + 1} · ${s}
+                  </span>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-slate-200/70 dark:border-slate-800 flex items-center justify-between font-mono text-[11px]">
+              <span class="text-slate-500 dark:text-slate-400">Output: <strong class="text-slate-700 dark:text-slate-200">${m.output}</strong></span>
+              <span class="text-emerald-600 dark:text-emerald-400 font-bold shrink-0 ml-2">-${saved}h/mo</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderNotes() {
+      const container = document.getElementById('notesListContainer');
+      if (!container) return;
+      container.innerHTML = NOTES_DATA.map((n, idx) => `
+        <article class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0e131d] hover:border-emerald-500/50 transition">
+          <div class="flex flex-wrap items-center justify-between gap-2 font-mono text-xs mb-2">
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-600 dark:text-emerald-400 font-bold">${n.num}</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">${n.topic}</span>
+            </div>
+            <span class="text-slate-400">${n.date} · ${n.read}</span>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">${n.title}</h3>
+          <p class="mt-1.5 text-sm text-slate-600 dark:text-slate-300">${n.summary}</p>
+          <div class="mt-4 pt-3 border-t border-slate-200/60 dark:border-slate-800/80 flex flex-wrap items-center justify-between gap-2 font-mono text-[11px]">
+            <code class="text-slate-400">track("note_published", { topic: "${n.topic}", id: "${n.num}" })</code>
+            <button type="button" data-note-idx="${idx}" class="open-note-btn text-emerald-600 dark:text-emerald-400 font-bold hover:underline">
+              Read note →
+            </button>
+          </div>
+        </article>
+      `).join('');
+
+      document.querySelectorAll('.open-note-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.getAttribute('data-note-idx'), 10);
+          const note = NOTES_DATA[idx];
+          if (!note) return;
+          document.getElementById('modalNoteMeta').textContent = `${note.num} · ${note.topic} · ${note.read}`;
+          document.getElementById('modalNoteTitle').textContent = note.title;
+          document.getElementById('modalNoteBody').innerHTML = note.body.map(p => `<p>${p}</p>`).join('');
+          document.getElementById('noteModal').classList.remove('hidden');
+        });
+      });
+    }
+
+    function runIdentifyEffect() {
+      const target = `hrAnalytics.identify("easter-raj", {
+  role: "HR Operations & Process Automation",
+  location: "Mumbai, Maharashtra",
+  experience: "9+ Years Total (4.5+ Yrs BFSI HR Ops)",
+  orgs: ["Kotak Neo", "ICICI Bank", "Aadya Habitat", "Zipgrid"],
+  hris: ["Darwinbox", "Oracle PeopleSoft", "TALLINT HireCraft"],
+  automation: ["7 Live VBA Macros", "MS Copilot", "Outlook Auto-Drafts"],
+  benchmark: "24h/mo manual process compressed to 1h/mo (-96%)"
+});`;
+      const pre = document.getElementById('identifyCodeBlock');
+      if (!pre) return;
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&*+<>=';
+      let step = 0;
+      clearInterval(window._idInterval);
+      window._idInterval = setInterval(() => {
+        step += 18;
+        if (step >= target.length) {
+          pre.textContent = target;
+          clearInterval(window._idInterval);
+          return;
+        }
+        const revealed = target.slice(0, step);
+        const scrambled = target.slice(step, step + 35).replace(/[A-Za-z0-9]/g, () => chars[Math.floor(Math.random() * chars.length)]);
+        pre.textContent = revealed + scrambled;
+      }, 30);
+    }
+
+    function triggerCvDownload() {
+      const cvHtml = `<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Easter_Raj_CV</title>
+<style>
+  body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; color: #1e293b; line-height: 1.35; margin: 1in; }
+  h1 { font-size: 20pt; color: #0f2942; margin: 0 0 2pt 0; }
+  .subtitle { font-size: 11pt; font-weight: bold; color: #1d4ed8; margin-bottom: 4pt; }
+  .contact { font-size: 10.5pt; color: #334155; margin-bottom: 12pt; }
+  h2 { font-size: 12.5pt; color: #0f2942; border-bottom: 1.5pt solid #1d4ed8; padding-bottom: 2pt; margin-top: 12pt; margin-bottom: 6pt; text-transform: uppercase; }
+  .role { font-weight: bold; color: #0f2942; margin-top: 8pt; }
+  ul { margin-top: 3pt; margin-bottom: 6pt; }
+  li { margin-bottom: 3pt; }
+  table { width: 100%; border-collapse: collapse; margin-top: 6pt; font-size: 10pt; }
+  th { background: #0f2942; color: #ffffff; text-align: left; padding: 5pt; }
+  td { border: 1px solid #cbd5e1; padding: 5pt; vertical-align: top; }
+</style></head><body>
+  <h1>EASTER RAJ</h1>
+  <div class="subtitle">HR Operations &amp; Process Automation Specialist | HRIS (Darwinbox &amp; Oracle PeopleSoft) | People Operations &amp; Analytics</div>
+  <div class="contact">Mumbai, Maharashtra | +91 9987973836 | easterraj321@gmail.com | linkedin.com/in/easter-raj-00348b142</div>
+
+  <h2>Executive Summary</h2>
+  <p>Results-driven HR Operations &amp; Process Automation Specialist with 9+ years of total operational experience, including 4.5+ years in enterprise BFSI HR Operations at Kotak Neo (Kotak Securities Ltd.) and ICICI Bank Ltd. Proven expertise in re-engineering manual, high-volume HR lifecycle workflows into automated, audit-ready systems using Excel VBA Macros, MS Copilot (GenAI), Darwinbox HRIS, and Oracle PeopleSoft. Selected by senior leadership at Kotak Neo to lead dedicated HR process automation after building a live macro that compressed a 24-hour monthly manual cycle into 1 hour (96% time savings). Adept at PAN-India onboarding (100+ monthly hires), payroll &amp; attendance controls, exit governance, and executive MIS dashboards with 100% SLA adherence and zero audit discrepancies.</p>
+
+  <h2>Professional Experience</h2>
+  <div class="role">Team Member — HR Operations &amp; Process Automation | Kotak Neo (Kotak Securities Ltd.), Mumbai (May 2026 – Present)</div>
+  <ul>
+    <li><strong>Dedicated Process Automation Mandate:</strong> Relieved of routine transactional workload by senior HR leadership after demonstrating a working Excel VBA + MS Copilot prototype; entrusted with automating manual HR Operations workflows across the team.</li>
+    <li><strong>96% Cycle-Time Reduction (23 Hours Saved/Month):</strong> Delivered the first production macro from UAT testing to live deployment within 15 days, cutting a 24-hour monthly manual workflow down to 1 hour.</li>
+    <li><strong>7 Production VBA Automation Engines:</strong> Conceptualized and launched 7 end-to-end Excel VBA and Outlook automation tools between September and October 2026 across daily onboarding, Darwinbox bulk CSV activation, absconding escalations, payroll controls, exit LBC tracking, and compensation parity audits.</li>
+    <li><strong>Executive MIS &amp; Darwinbox HRIS:</strong> Publishes monthly HR MIS reports and leadership dashboards on Darwinbox HRIS; managed PAN-India pre-offer validation during initial tenure.</li>
+  </ul>
+
+  <div class="role">HR Operations &amp; Recruitment Executive | ICICI Bank Limited, Mumbai (September 2022 – May 2026)</div>
+  <ul>
+    <li><strong>High-Volume West Zone Onboarding (100+ Hires/Month):</strong> Managed end-to-end onboarding for 100+ monthly retail hires across the West Zone with 100% adherence to Turnaround Time (TAT) SLAs.</li>
+    <li><strong>Top 15% Internal Talent Retention:</strong> Selected among 33 branch banking officers for internal transfer into HR Operations and retained as 1 of only 5 top performers after a rigorous 2-year performance evaluation.</li>
+    <li><strong>Oracle PeopleSoft &amp; Zero-Discrepancy Audits:</strong> Validated employee lifecycle documentation and joining compliance in Oracle PeopleSoft HRIS and TALLINT HireCraft ATS with zero audit discrepancies.</li>
+  </ul>
+
+  <div class="role">Relationship Manager — Branch Banking | ICICI Bank Limited, Mumbai (July 2022 – September 2022)</div>
+  <ul>
+    <li>Managed client portfolios, regulatory KYC compliance, and retail branch operations before earning fast-track selection into the regional HR Operations team within 2 months.</li>
+  </ul>
+
+  <div class="role">Society Manager — Accounts, Administration &amp; Compliance | Aadya Habitat LLP · Zipgrid · Satellite Garden D-1 CHS, Mumbai (June 2017 – July 2022)</div>
+  <ul>
+    <li>Directed administrative operations, accounting, billing cycles, vendor SLAs, and statutory compliance registers across residential complexes in Mumbai.</li>
+  </ul>
+
+  <h2>Signature HR Automation &amp; VBA Macro Portfolio (Kotak Neo)</h2>
+  <table>
+    <tr><th>Macro / Tool</th><th>Workflow Architecture &amp; Impact</th></tr>
+    <tr><td><strong>1. Today's Joiner &amp; Darwinbox Engine</strong></td><td>Unlocks Offer Master, filters daily joiners, creates dated folder, generates 9 files (5 Darwinbox CSVs + 4 stakeholder XLSX trackers), and auto-drafts Outlook emails.</td></tr>
+    <tr><td><strong>2. Absconding Escalation Tool</strong></td><td>Filters 6+ consecutive unapproved absent days into ageing buckets (6d, 7–14d, &gt;14d), builds HRRM summaries, and drafts Outlook emails (HRRMs in To, Regional HRs in CC).</td></tr>
+    <tr><td><strong>3. 3-Day Continuous Absence Control</strong></td><td>Flags 3+ continuous unregularized absent days ahead of monthly payroll cutoff to prevent salary holds and post-payroll disputes.</td></tr>
+    <tr><td><strong>4. Notice Period LBC Tracker</strong></td><td>Identifies pending Ledger Balance Confirmations for resigned employees in notice period, updates LBC Master, and alerts Payroll.</td></tr>
+    <tr><td><strong>5. Pending Resignation &amp; LWD Escalator</strong></td><td>Flags pending manager resignation approvals and sends automated reminders to HRRMs with Days-to-LWD urgency buckets.</td></tr>
+    <tr><td><strong>6. Grade &amp; CTC Parity Audit</strong></td><td>Audits hierarchy to flag cases where a report holds equal or higher Grade/CTC than their manager, generating an executive dashboard.</td></tr>
+    <tr><td><strong>7. Dealer Landline Compliance Auditor</strong></td><td>Identifies active dealers missing mandatory landline numbers and auto-drafts compliance action emails to respective HRRMs.</td></tr>
+  </table>
+
+  <h2>Education &amp; Languages</h2>
+  <p><strong>Bachelor of Commerce (B.Com)</strong> — Vivek College of Commerce, University of Mumbai (April 2017)<br/>
+  <strong>Languages:</strong> English (Professional) • Hindi (Advanced) • Tamil (Native) • Marathi (Conversational)</p>
+</body></html>`;
+
+      const blob = new Blob([cvHtml], { type: 'application/msword;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Easter_Raj_Resume_2026.doc';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+      showToast('Downloaded Easter_Raj_Resume_2026.doc');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderRoles();
+      renderMacros();
+      renderNotes();
+      runIdentifyEffect();
+
+      document.querySelectorAll('.pipeline-node').forEach(btn => {
+        btn.addEventListener('click', () => selectPipelineNode(btn.getAttribute('data-node')));
+      });
+
+      document.querySelectorAll('.macro-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeMacroFilter = btn.getAttribute('data-macro-filter');
+          document.querySelectorAll('.macro-filter-btn').forEach(b => {
+            b.className = 'macro-filter-btn px-3 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:opacity-80 transition';
+          });
+          btn.className = 'macro-filter-btn px-3 py-1.5 rounded bg-slate-900 text-white dark:bg-emerald-500 dark:text-slate-950 font-semibold transition';
+          renderMacros();
+        });
+      });
+
+      document.getElementById('cycleMultiplier').addEventListener('input', renderMacros);
+      document.getElementById('replayIdentifyBtn').addEventListener('click', runIdentifyEffect);
+
+      document.getElementById('themeToggleBtn').addEventListener('click', () => {
+        const htmlEl = document.documentElement;
+        const isDark = htmlEl.classList.toggle('dark');
+        document.getElementById('themeToggleLabel').textContent = isDark ? 'Light mode' : 'Dark mode';
+      });
+
+      document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+        document.getElementById('mobileMenuPanel').classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => document.getElementById('mobileMenuPanel').classList.add('hidden'));
+      });
+
+      ['downloadCvTopBtn', 'downloadCvHeroBtn', 'downloadCvBottomBtn', 'downloadCvFooterBtn'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('click', triggerCvDownload);
+      });
+      document.getElementById('printCvBtn').addEventListener('click', () => window.print());
+
+      document.getElementById('copyEmailBtn').addEventListener('click', () => {
+        const email = 'easterraj321@gmail.com';
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(() => showToast('Copied easterraj321@gmail.com')).catch(() => showToast(email));
+        } else {
+          showToast('Email: easterraj321@gmail.com');
+        }
+      });
+
+      const waTextarea = document.getElementById('waCustomMessage');
+      const waLink = document.getElementById('waDynamicLaunchLink');
+      function updateWaHref() {
+        const msg = (waTextarea.value || '').trim() || "Hi Easter, I visited your portfolio website and would love to connect!";
+        waLink.href = 'https://wa.me/919987973836?text=' + encodeURIComponent(msg);
+      }
+      waTextarea.addEventListener('input', updateWaHref);
+      document.querySelectorAll('.wa-preset-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          waTextarea.value = btn.getAttribute('data-wa-preset');
+          updateWaHref();
+          showToast('Updated WhatsApp message template');
+        });
+      });
+
+      document.getElementById('closeNoteModalBtn').addEventListener('click', () => {
+        document.getElementById('noteModal').classList.add('hidden');
+      });
+      document.getElementById('noteModal').addEventListener('click', (e) => {
+        if (e.target.id === 'noteModal') document.getElementById('noteModal').classList.add('hidden');
+      });
+
+      document.getElementById('pauseAnimBtn').addEventListener('click', () => {
+        animationsPaused = !animationsPaused;
+        document.body.classList.toggle('animations-paused', animationsPaused);
+        document.getElementById('pauseAnimBtn').textContent = animationsPaused
+          ? 'Signal: Paused — resume animations'
+          : 'Signal: Live — pause animations';
+      });
+
+      window.addEventListener('scroll', () => {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? Math.min(100, Math.max(0, Math.round((window.scrollY / docHeight) * 100))) : 0;
+        document.getElementById('scrollPercent').textContent = String(pct).padStart(3, '0');
+
+        const sections = document.querySelectorAll('section[data-stream]');
+        let currentStream = '00 — Ingest · Home';
+        sections.forEach(sec => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top <= 180) {
+            currentStream = sec.getAttribute('data-stream');
+          }
+        });
+        document.getElementById('activeStreamLabel').textContent = currentStream;
+      });
+
+      setInterval(() => {
+        if (animationsPaused) return;
+        streamSeconds = +(streamSeconds + 0.5).toFixed(1);
+        const clockEl = document.getElementById('streamClock');
+        if (clockEl) clockEl.textContent = 'T+' + streamSeconds.toFixed(1).padStart(4, '0') + 's';
+      }, 500);
+    });
+  </script>
+<script>
+(() => {
+  const root = document.documentElement;
+  const topbar = document.querySelector('body > .no-print.sticky');
+  if (topbar && !topbar.querySelector('.scroll-progress')) { const bar=document.createElement('div'); bar.className='scroll-progress'; topbar.appendChild(bar); }
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced && 'IntersectionObserver' in window) {
+    document.body.classList.add('reveal-ready');
+    const revealTargets = document.querySelectorAll('main section > div, main section article, main section .grid > div');
+    revealTargets.forEach((el,i)=>{ if(i===0 && el.closest('section')===document.querySelector('main section')) return; el.classList.add('reveal'); });
+    const io = new IntersectionObserver(entries=>entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); } }),{threshold:.12,rootMargin:'0px 0px -36px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  }
+  let ticking=false;
+  function updateProgress(){ const max=document.documentElement.scrollHeight-innerHeight; const pct=max>0?Math.min(100,scrollY/max*100):0; root.style.setProperty('--page-progress',pct+'%'); ticking=false; }
+  addEventListener('scroll',()=>{ if(!ticking){ requestAnimationFrame(updateProgress); ticking=true; } },{passive:true}); updateProgress();
+  const sections=[...document.querySelectorAll('main section[id]')];
+  if ('IntersectionObserver' in window) { const navObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{ if(entry.isIntersecting){ sections.forEach(s=>s.classList.remove('section-current')); entry.target.classList.add('section-current'); document.querySelectorAll('nav a[href^="#"]').forEach(a=>{ if(a.getAttribute('href')==='#'+entry.target.id) a.setAttribute('aria-current','location'); else a.removeAttribute('aria-current'); }); } }),{rootMargin:'-25% 0px -65% 0px'}); sections.forEach(s=>navObserver.observe(s)); }
+  document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>{ const panel=document.getElementById('mobileMenuPanel'); if(panel) panel.classList.add('hidden'); }));
+  const themeButton=document.getElementById('themeToggleBtn'); if(themeButton){ const dark=localStorage.getItem('easter-theme'); if(dark==='light') root.classList.remove('dark'); document.getElementById('themeToggleLabel').textContent=root.classList.contains('dark')?'Light mode':'Dark mode'; themeButton.addEventListener('click',()=>localStorage.setItem('easter-theme',root.classList.contains('dark')?'dark':'light')); }
+})();
+</script>
+</body>
+</html>
